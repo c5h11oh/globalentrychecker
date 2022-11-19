@@ -2,3 +2,5 @@ __pycache__/
 venv/
 locations/*
 !locations/all_locations.json
+.secrets
+secrets.json
