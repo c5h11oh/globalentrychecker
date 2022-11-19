@@ -9,11 +9,11 @@ python3 -m virtualenv venv
 source venv/bin/activate
 
 # install packages
-python -m pip install -r requirements.txt
+python -m pip install -r requirement.txt
 ```
 
 ## Usage
-1. Specify your preferred location id and your last availability date in `preference.json`. 
+1. Specify your preferred location id and your last available date in `preference.json`. 
   - datebefore: the last day to look for appointment. Date string format is "YYYY-MM-DD".
   - locations: a list of Enrollment Center IDs.
   - Enrollment center IDs can be found at `locations/all_locations.json`. If the file does not exist, generate it by running `python3 get_all_locations.py` (and format the json on your own).
