@@ -9,7 +9,7 @@ python3 -m virtualenv venv
 source venv/bin/activate
 
 # install packages
-python -m pip install -r requirements.txt
+python -m pip install -r requirement.txt
 ```
 
 ## Usage
