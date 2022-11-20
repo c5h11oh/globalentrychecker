@@ -51,7 +51,7 @@ def check_availability(preferences: dict):
     if (len(match_id) == 0):
         return (False, avail_locations)
     avail_time_slots = pd.concat(map(get_slot_datetime, iter(match_id)))[['locationId', 'startTimestamp']].astype({'startTimestamp':'datetime64[ns]'})
-    slots_time_location = avail_time_slots[avail_time_slots['startTimestamp'] < datetimebefore].join(all_locations.set_index('id')[['state', 'city', 'name', 'address']], 'locationId').sort_values('startTimestamp')[1:]
+    slots_time_location = avail_time_slots.join(all_locations.set_index('id')[['state', 'city', 'name', 'address']], 'locationId').sort_values('startTimestamp')[1:] # avail_time_slots[avail_time_slots['startTimestamp'] < datetimebefore]
     return (True, slots_time_location)
 
 if __name__ == '__main__':
